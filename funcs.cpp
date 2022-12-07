@@ -42,12 +42,12 @@ std::vector<int> sumPairWise(const std::vector<int> &v1, const std::vector<int> 
     }
     for (int i = 0; i < smaller_vector.size(); i++){
         int sum = smaller_vector[i] + bigger_vector[i];
-        combined_vector[i] = sum;
+        combined_vector.push_back(sum);
     }
     int numExtra = bigger_vector.size() - smaller_vector.size();
     if (numExtra > 0){
         for (int i = smaller_vector.size(); i < bigger_vector.size(); i++){
-            combined_vector[i] = bigger_vector[i];
+            combined_vector.push_back(bigger_vector[i]);
         }
     }
     return combined_vector;
